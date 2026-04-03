@@ -12,7 +12,7 @@ const ora = require("ora");
 const logUpdate = require("log-update");
 
 const MIDI_PATH = "./audio/compressed";
-const ARDUINO_PORT = "/dev/tty.usbserial-A5069RR4"; // For testing without Arduino, run ls /dev/tty.* to find the correct port
+const ARDUINO_PORT = "...."; // Set this to your Arduino's serial port (e.g., COM3 on Windows or /dev/ttyUSB0 on Linux)
 const BAUD_RATE = 9600; // Match the Arduino baud rate
 
 function midiNoteToFreq(note) {
