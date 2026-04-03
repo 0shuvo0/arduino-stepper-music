@@ -1,5 +1,5 @@
 # Playing music with stepper motors
-[![Demno](preview.png)](https://www.youtube.com/watch?v=9n8sXo2l5j0)
+[![Demno](preview.png)](https://www.facebook.com/share/v/1NHMwC1gs9/)
 
 ### Requirements
 - 4 stepper motors
