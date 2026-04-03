@@ -1,0 +1,26 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node midi-sender.js",
+    "clean": "node midi-cleaner.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tonejs/midi": "^2.0.28",
+    "boxen": "^8.0.1",
+    "chalk": "^4.1.2",
+    "chalk-animation": "^2.0.3",
+    "enquirer": "^2.4.1",
+    "figlet": "^1.11.0",
+    "gradient-string": "^3.0.0",
+    "log-update": "^4.0.0",
+    "ora": "^5.4.1",
+    "serialport": "^13.0.0"
+  }
+}
