@@ -1,30 +1,46 @@
-# Playing music with stepper motors
-[![Demno](preview.png)](https://www.facebook.com/share/v/1NHMwC1gs9/)
+# Playing Music with Stepper Motors
+
+[![Demo](preview.png)](https://www.facebook.com/share/v/1NHMwC1gs9/)
 
 ### Requirements
-- 4 stepper motors
-- 4 stepper motor drivers
-- Arduino uno
-- Arduino CNC shield
--[Node.js](https://nodejs.org/en/download/) installed
 
-Simply plug in the motors and drivers to the CNC shield, connect the shield to the Arduin.
-Here's an example on 1 motor connected. Connect all 4 motors in the same way to the CNC shield.
+* 4 stepper motors
+* 4 stepper motor drivers
+* Arduino Uno
+* Arduino CNC shield
+* [Node.js](https://nodejs.org/en/download/) installed
+
+---
+
+### Setup
+
+Simply plug the motors and drivers into the CNC shield, then connect the shield to the Arduino.
+
+Below is an example of one motor connected. Connect all 4 motors in the same way to the CNC shield.
+
 ![Motors Wiring](wiring-example.png)
-*for the forth A axis motor to work independently, you need to connect 2 jumper wires like this:*
+
+*For the fourth (A-axis) motor to work independently, you need to connect two jumper wires like this:*
+
 ![A axis Wiring](cnc-jumper-config.png)
 
+---
 
 ### Usage
+
 1. Clone the repository and navigate to the project directory.
-2. Open terminal in *scripts* folder and run `npm install` to install the required dependencies.
-3. Connect the Arduino to your computer and upload the `src/main.cpp` sketch to the Arduino using *PlatformIO* or *Arduino IDE*.
-4. open `scripts/midi-sender.js` in a text editor and set the *ARDUINO_PORT* variable in line 15 to the correct port where your Arduino is.
-    * On windowns you can fine available ports by running `mode` in command prompt.
-    * On linux & macOS you can find available ports by running `ls /dev/tty*` in terminal.
-5. Run `npm start` in terminal (make sure you are in the *scripts* folder) to start the MIDI sender script. This will show you a list of available songs to play. Select a song by using up and down arrow keys and press enter to start playing the selected song.
+2. Open a terminal in the *scripts* folder and run `npm install` to install the required dependencies.
+3. Connect the Arduino to your computer and upload the `src/main.cpp` sketch using *PlatformIO* or the *Arduino IDE*.
+4. Open `scripts/midi-sender.js` in a text editor and set the `ARDUINO_PORT` variable on line 15 to the correct port where your Arduino is connected.
 
+   * On **Windows**, you can find available ports by running `mode` in Command Prompt.
+   * On **Linux & macOS**, you can find available ports by running `ls /dev/tty*` in the terminal.
+5. Run `npm start` in the terminal (make sure you are in the *scripts* folder). This will display a list of available songs. Use the arrow keys to select a song and press Enter to start playing.
 
-## Additional Notes
-if you want to add your own MIDI files, simply place them in `scripts/audio/og` folder and run `npm run clean` then the next time you run `npm start` you will see your own songs in the list of available songs to play.
-*with only 4 stepper motors, you can only play very simple MIDI files, complex musics will sound very bad.*
+---
+
+### Additional Notes
+
+* To add your own MIDI files, place them in the `scripts/audio/og` folder and run `npm run clean`. The next time you run `npm start`, your songs will appear in the list.
+* With only 4 stepper motors, you can play only simple MIDI files. Complex music will not sound good.
+
